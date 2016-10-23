@@ -1,13 +1,12 @@
-function actionWithHotelForm() {
-    form = document.getElementById('search-hotel-form');
-
-    if (form.style.display != 'flex') {
-        form.style.display = 'flex';
-    } else {
-        form.style.display = 'none';
-    }
-}
 $(document).ready(function(){
+    $('#search-opener').click(function() {
+        form = $('#search-hotel-form');
+        if (form.css('display') != 'flex') {
+            form.css('display', 'flex');
+        } else {
+            form.css('display', 'none');
+        }
+    });
     $('#minus-adult').click(function() {
         var $i = $('#adults').attr('value') - 1;
         if ($i >= 1)
