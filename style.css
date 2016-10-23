@@ -359,7 +359,6 @@ body {
 }
 
 .search-hotel-form-field-date input {
-    /*tsqw*/
     width: 75%;
     margin: 0;
     padding-left: 10px;
@@ -383,7 +382,6 @@ body {
 }
 
 .search-hotel-form-field-date .icon-calendar {
-    /*dsf*/
     position: absolute;
     right: 10px;
     top: 8px;
