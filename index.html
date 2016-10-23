@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Седона</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="symbols-sedona.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <a href="#"><img class="sedona-link" src="assets/images/header-logo.png" alt="SEDONA.COM"></a>
+        <ul class="links">
+            <li class="left-align"><a href="#">Информация</a></li>
+<!--            sada-->
+            <li class="left-align"><a href="#">Фото и видео</a></li>
+            <li class="sedona-link-space"></li>
+            <li class="right-align"><a href="#">Карта штата</a></li>
+            <li class="right-align"><a href="#">Гостиницы</a></li>
+        </ul>
+    </header>
+    <main class="page-container clearfix">
+        <div class="banner">
+            <div class="banner-text-1"></div>
+            <div class="banner-text-2"></div>
+            <div class="banner-text-3"></div>
+            <div class="white-layer"></div>
+        </div>
+        <div class="advantages">
+            <div class="advantages-intro">
+                <h2>Седона - небольшой городок в Аризоне, заслуживающий большего</h2>
+                <p>Рассмотрим 5 причин, по которым Седона лучше, чем Гранд Каньон!</p>
+            </div>
+            <div class="advantage advantage-blue-background">
+                <h2 class="advantage-title">Настоящий городок</h2>
+                <span class="advantage-number">- №1 -</span>
+                <p class="advantage-description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+            <div class="advantage-image advantage-real-city-image"></div>
+            <ul class="features">
+                <li>
+                    <h2 class="name">Жилье</h2>
+                    <p class="description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </li>
+                <li>
+                    <h2 class="name">Еда</h2>
+                    <p class="description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                </li>
+                <li>
+                    <h2 class="name">Сувениры</h2>
+                    <p class="description">Не только китайского, но и местного производства!</p>
+                </li>
+            </ul>
+            <div class="advantage-image advantage-devils-bridge-image"></div>
+            <div class="advantage advantage-blue-background">
+                <h2 class="advantage-title">Там есть мост дьявола</h2>
+                <span class="advantage-number">- №2 -</span>
+                <p class="advantage-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
+            <div class="advantage advantage-grey-background">
+                <h2 class="advantage-title">Небольшая площадь</h2>
+                <p class="advantage-number">- №3 -</p>
+                <p class="advantage-description">Все достопримеча-тельности находятся очень близко</p>
+            </div>
+            <div class="advantage advantage-grey-background">
+                <h2 class="advantage-title">Красивая дорога</h2>
+                <p class="advantage-number">- №4 -</p>
+                <p class="advantage-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+            <div class="advantage advantage-grey-background">
+                <h2 class="advantage-title">Мало туристов</h2>
+                <p class="advantage-number">- №5 -</p>
+                <p class="advantage-description">Большинство едет в Гранд-Каньон и толпится там</p>
+            </div>
+        </div>
+        <div class="search-hotel-container">
+            <h1>Заинтересовались?</h1>
+            <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <button class="search-opener" onclick="actionWithHotelForm();">Поиск гостиницы в Седоне</button>
+            <form class="search-hotel-form" id="search-hotel-form">
+                <div class="search-hotel-form-field-date">
+                    <label for="in">Дата заезда:</label>
+                    <input id="in" name="date-in" type="text">
+                    <div class="icon-calendar"></div>
+                </div>
+                <div class="search-hotel-form-field-date">
+                    <label for="out">Дата выезда:</label>
+                    <input id="out" name="date-out" type="text">
+                    <div class="icon-calendar"></div>
+
+                </div>
+                <div class="search-hotel-form-field-quantity">
+                    <label for="adults">Взрослые:</label>
+                    <div class="minus-button icon-minus" id="minus-adult"></div>
+                    <input id="adults" name="adults-quantity" type="text" value="1" disabled>
+                    <div class="plus-button icon-plus" id="plus-adult"></div>
+
+                </div>
+                <div class="search-hotel-form-field-quantity">
+                    <label for="children">Дети:</label>
+                    <div class="minus-button icon-minus" id="minus-child"></div>
+                    <input id="children" name="children-quantity" type="text" value="0" disabled>
+                    <div class="plus-button icon-plus" id="plus-child"></div>
+
+                </div>
+                <input class="submit" type="submit" value="Найти">
+            </form>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <ul>
+            <li class="hashtag-visitsedona">
+                <a href="https://www.google.ru/search?q=%23VISITSEDONA" class="hashtag-visitsedona">#VISITSEDONA</a>
+            </li>
+            <li>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://twitter.com" title="Наш твиттер"><i class="icon-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com" title="Наш фейсбук"><i class="icon-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" title="Наш ютуб"><i class="icon-youtube"></i></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Website by</p>
+                <a href="https://htmlacademy.ru" class="link-htmlacademy" title="HTMLAcademy"></a>
+            </li>
+        </ul>
+    </footer>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
