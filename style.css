@@ -35,8 +35,8 @@ body {
 
 .page-header {
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     margin: 0 auto;
     width: 768px;
     height: 60px;
@@ -45,7 +45,7 @@ body {
     font-family: PTSansBold;
 }
 
-.page-header > a {
+.page-header .sedona-link {
     position: absolute;
     left: 50%;
     margin-left: -69px;
@@ -84,7 +84,7 @@ body {
 
 .page-header .sedona-link-space {
     flex-basis: 8%;
-    flex-grow: 0;
+    flex-grow: 1;
 }
 
 .page-header a {
@@ -108,7 +108,7 @@ body {
     visibility: hidden;
 }
 
-.page-container .banner {
+.page-container .promo-image {
     position: relative;
     width: 100%;
     height: 724px;
@@ -116,44 +116,23 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    overflow: hidden;
-    z-index: 1;
 }
 
-.page-container .banner-text-1 {
-    margin-top: 122px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url(assets/images/promo-text-Welcome-to-the-gorgeous.png);
+.page-container .promo-image-text {
+    width: 100%;
+    height: 100%;
+    background-image:
+        url(assets/images/promo-text-Welcome-to-the-gorgeous.png),
+        url(assets/images/promo-text-Sedona.png),
+        url(assets/images/promo-text-Because-the-Grand-Canyon-sucks.png);
     background-repeat: no-repeat;
-    background-position: center center;
-    width: 283px;
-    height: 99px;
+    background-position:
+        center 130px,
+        center 270px,
+        center 400px;
 }
 
-.page-container .banner-text-2 {
-    margin-top: 39px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url(assets/images/promo-text-Sedona.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 498px;
-    height: 98px;
-}
-
-.page-container .banner-text-3 {
-    margin-top: 41px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url(assets/images/promo-text-Because-the-Grand-Canyon-sucks.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 335px;
-    height: 99px;
-}
-
-.page-container .banner .white-layer {
+.page-container .promo-image .promo-mask {
     position: absolute;
     top: 530px;
     height: 60px;
@@ -549,7 +528,7 @@ body {
     width: 113px;
     height: 39px;
     margin-left: 6px;
-    margin-top: 7px;
+    margin-top: 5px;
     background-image: url(assets/images/by-htmlacademy.png);
 }
 
