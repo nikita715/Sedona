@@ -8,20 +8,13 @@
     src: url('assets/fonts/ptsans.woff2') format('woff2'), url('assets/fonts/ptsans.woff') format('woff');
 }
 
-h1 {
-    font-family: PTSansBold;
-    font-size: 28px;
-    line-height: 25px;
-}
-
 h2 {
     font-family: PTSansBold;
     font-size: 21px;
     line-height: 25px;
 }
 
-p,
-span {
+p {
     font-size: 14px;
     font-family: PTSans;
     line-height: 20px;
@@ -51,7 +44,7 @@ body {
     margin-left: -69px;
 }
 
-.page-header .links {
+.page-header .main-nav {
     display: flex;
     margin: 0;
     padding: 0;
@@ -66,11 +59,11 @@ body {
     flex-grow: 1;
 }
 
-.page-header .links .left-align {
-    justify-content: flex-start;
+.page-header li:nth-child(2) {
+    margin-right: 8%;
 }
 
-.page-header .links .right-align {
+.page-header li:nth-child(n+3) {
     justify-content: flex-end;
 }
 
@@ -80,11 +73,6 @@ body {
 
 .page-header li:last-child {
     margin-right: 6%;
-}
-
-.page-header .sedona-link-space {
-    flex-basis: 8%;
-    flex-grow: 1;
 }
 
 .page-header a {
@@ -112,35 +100,10 @@ body {
     position: relative;
     width: 100%;
     height: 724px;
-    background-image: url(assets/images/promo-background.png);
+    background-image: url(assets/images/promo-bottom-mask.png), url(assets/images/promo-image.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-}
-
-.page-container .promo-image-text {
-    width: 100%;
-    height: 100%;
-    background-image:
-        url(assets/images/promo-text-Welcome-to-the-gorgeous.png),
-        url(assets/images/promo-text-Sedona.png),
-        url(assets/images/promo-text-Because-the-Grand-Canyon-sucks.png);
-    background-repeat: no-repeat;
-    background-position:
-        center 130px,
-        center 270px,
-        center 400px;
-}
-
-.page-container .promo-image .promo-mask {
-    position: absolute;
-    top: 530px;
-    height: 60px;
-    width: 100%;
-    background-image: url(assets/images/promo-bottom-mask.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    background-size: 100% auto, cover;
+    background-position: center 554px, top center;
 }
 
 .advantages {
@@ -177,6 +140,11 @@ body {
     text-align: center;
 }
 
+.advantage-image {
+    background-repeat: no-repeat;
+    background-size: 67% 100%;
+}
+
 .advantage-title {
     width: 151px;
     margin-top: 50px;
@@ -200,20 +168,15 @@ body {
     overflow: hidden;
 }
 
-.advantage-image {
-    flex-basis: 66%;
-    flex-grow: 2;
-    height: 256px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
-
 .advantage-real-city-image {
+    padding-right: 67%;
+    background-position: 100% center;
     background-image: url(assets/images/real-city.png);
 }
 
 .advantage-devils-bridge-image {
+    padding-left: 67%;
+    background-position: 0% center;
     background-image: url(assets/images/devil-bridge.png);
 }
 
@@ -261,11 +224,11 @@ body {
     background-position: center 60px;
 }
 
-.features h2 {
+.features .feature-name {
     margin-top: 165px;
 }
 
-.features p {
+.features .feature-description {
     width: 66%;
     margin-left: auto;
     margin-right: auto;
@@ -273,7 +236,7 @@ body {
     overflow: hidden;
 }
 
-.search-hotel-container {
+.search-hotel {
     position: relative;
     height: 900px;
     text-align: center;
@@ -283,26 +246,33 @@ body {
     overflow: hidden;
 }
 
-.search-hotel-container > h1 {
+.search-hotel > p:nth-child(1) {
     margin-top: 60px;
+    font-family: PTSansBold;
+    font-size: 28px;
+    line-height: 25px;
 }
 
-.search-hotel-container > p {
+.search-hotel > p:nth-child(2) {
     width: 450px;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.search-hotel-container .search-opener {
+.search-hotel .search-hotel-opener {
+    display: block;
     width: 570px;
     height: 85px;
-    margin-top: 36px;
+    margin: 0 auto;
+    margin-top: 50px;
     background-color: #766357;
     border: none;
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 20px;
     font-family: PTSansBold;
+    line-height: 83px;
     color: white;
     cursor: pointer;
     outline: none;
@@ -320,9 +290,7 @@ body {
     background-color: white;
     font-family: PTSansBold;
     font-size: 16px;
-    box-shadow:
-        0 0 15px 0 #797979;
-
+    box-shadow: 0 0 15px 0 #797979;
 }
 
 .search-hotel-form-field-date {
@@ -337,6 +305,7 @@ body {
     width: 26%;
     line-height: 38px;
     text-align: left;
+    color: black;
 }
 
 .search-hotel-form-field-date input {
@@ -362,18 +331,17 @@ body {
     border: 2px solid #e5e5e5;
 }
 
-.search-hotel-form-field-date .icon-calendar {
+.search-hotel-form .icon-calendar {
     position: absolute;
-    right: 10px;
     top: 8px;
-    color: #c2c2c2;
+    right: 7px;
 }
 
-.search-hotel-form-field-date .icon-calendar:hover {
+.search-hotel-form .icon-calendar:hover {
     color: #000000;
 }
 
-.search-hotel-form-field-date .icon-calendar:active {
+.search-hotel-form .icon-calendar:active {
     color: #81b3d2;
 }
 
@@ -389,6 +357,7 @@ body {
     padding: 0;
     line-height: 38px;
     text-align: left;
+    color: #000000;
 }
 
 .search-hotel-form-field-quantity:nth-child(2n) label {
@@ -396,8 +365,8 @@ body {
     box-sizing: border-box;
 }
 
-.search-hotel-form .minus-button,
-.search-hotel-form .plus-button {
+.search-hotel-minus-button,
+.search-hotel-plus-button {
     width: 38px;
     font-size: 12px;
     line-height: 40px;
@@ -407,13 +376,13 @@ body {
     color: #a9a9a9;
 }
 
-.search-hotel-form .minus-button:hover,
-.search-hotel-form .plus-button:hover {
+.search-hotel-minus-button:hover,
+.search-hotel-plus-button:hover {
     color: #000000;
 }
 
-.search-hotel-form .minus-button:active,
-.search-hotel-form .plus-button:active {
+.search-hotel-minus-button:active,
+.search-hotel-plus-button:active {
     color: #81b3d2;
 }
 
@@ -429,7 +398,7 @@ body {
     color: black;
 }
 
-.search-hotel-container .search-hotel-form .submit {
+.search-hotel .search-hotel-form .submit {
     position: relative;
     bottom: -30px;
     width: 100%;
@@ -443,11 +412,11 @@ body {
     color: white;
 }
 
-.search-hotel-container .search-hotel-form .submit:hover {
+.search-hotel .search-hotel-form .submit:hover {
     background-color: #669ec0;
 }
 
-.search-hotel-container .search-hotel-form .submit:active {
+.search-hotel .search-hotel-form .submit:active {
     background-color: #5496bd;
     color: #88b6d1;
 }
@@ -507,6 +476,7 @@ body {
     line-height: 48px;
     text-align: center;
     vertical-align: middle;
+    overflow: hidden;
 }
 
 .page-footer .social-links i {

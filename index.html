@@ -10,48 +10,42 @@
 <body>
     <header class="page-header">
         <a class="sedona-link" href="#"><img src="assets/images/header-logo.png" alt="SEDONA.COM"></a>
-        <ul class="links">
-            <li class="left-align"><a href="#">Информация</a></li>
-            <li class="left-align"><a href="#">Фото и видео</a></li>
-            <li class="sedona-link-space"></li>
-            <li class="right-align"><a href="#">Карта штата</a></li>
-            <li class="right-align"><a href="#">Гостиницы</a></li>
+        <ul class="main-nav">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+            <li><a href="#">Карта штата</a></li>
+            <li><a href="#">Гостиницы</a></li>
         </ul>
     </header>
     <main class="page-container clearfix">
-        <div class="promo-image">
-            <div class="promo-image-text"></div>
-            <div class="promo-mask"></div>
-        </div>
+        <div class="promo-image"></div>
         <div class="advantages">
             <div class="advantages-intro">
                 <h2>Седона - небольшой городок в Аризоне, заслуживающий большего</h2>
                 <p>Рассмотрим 5 причин, по которым Седона лучше, чем Гранд Каньон!</p>
             </div>
-            <div class="advantage advantage-blue-background">
+            <div class="advantage advantage-blue-background advantage-image advantage-real-city-image">
                 <h2 class="advantage-title">Настоящий городок</h2>
-                <span class="advantage-number">- №1 -</span>
+                <p class="advantage-number">- №1 -</p>
                 <p class="advantage-description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <div class="advantage-image advantage-real-city-image"></div>
             <ul class="features">
                 <li>
-                    <h2 class="name">Жилье</h2>
-                    <p class="description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                    <h2 class="feature-name">Жилье</h2>
+                    <p class="feature-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
                 <li>
-                    <h2 class="name">Еда</h2>
-                    <p class="description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                    <h2 class="feature-name">Еда</h2>
+                    <p class="feature-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
                 <li>
-                    <h2 class="name">Сувениры</h2>
-                    <p class="description">Не только китайского, но и местного производства!</p>
+                    <h2 class="feature-name">Сувениры</h2>
+                    <p class="feature-description">Не только китайского, но и местного производства!</p>
                 </li>
             </ul>
-            <div class="advantage-image advantage-devils-bridge-image"></div>
-            <div class="advantage advantage-blue-background">
+            <div class="advantage advantage-blue-background advantage-image advantage-devils-bridge-image">
                 <h2 class="advantage-title">Там есть мост дьявола</h2>
-                <span class="advantage-number">- №2 -</span>
+                <p class="advantage-number">- №2 -</p>
                 <p class="advantage-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
             <div class="advantage advantage-grey-background">
@@ -70,35 +64,32 @@
                 <p class="advantage-description">Большинство едет в Гранд-Каньон и толпится там</p>
             </div>
         </div>
-        <div class="search-hotel-container">
-            <h1>Заинтересовались?</h1>
+        <div class="search-hotel">
+            <p>Заинтересовались?</p>
             <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <button class="search-opener" id="search-opener">Поиск гостиницы в Седоне</button>
-            <form class="search-hotel-form" id="search-hotel-form">
+            <a class="search-hotel-opener" id="search-hotel-opener" href="hotels.html">Поиск гостиницы в Седоне</a>
+            <form class="search-hotel-form" id="search-hotel-form" method="post" action="#">
                 <div class="search-hotel-form-field-date">
-                    <label for="in">Дата заезда:</label>
-                    <input id="in" name="date-in" type="text">
-                    <div class="icon-calendar"></div>
+                    <label for="search-hotel-check-in">Дата заезда:</label>
+                    <input id="search-hotel-check-in" name="date-in" type="text">
+                    <span class="icon-calendar"></span>
                 </div>
                 <div class="search-hotel-form-field-date">
-                    <label for="out">Дата выезда:</label>
-                    <input id="out" name="date-out" type="text">
-                    <div class="icon-calendar"></div>
-
+                    <label for="search-hotel-check-out">Дата выезда:</label>
+                    <input id="search-hotel-check-out" name="date-out" type="text">
+                    <span class="icon-calendar"></span>
                 </div>
                 <div class="search-hotel-form-field-quantity">
                     <label for="adults">Взрослые:</label>
-                    <div class="minus-button icon-minus" id="minus-adult"></div>
+                    <div class="search-hotel-minus-button icon-minus" id="minus-adult"></div>
                     <input id="adults" name="adults-quantity" type="text" value="1" disabled>
-                    <div class="plus-button icon-plus" id="plus-adult"></div>
-
+                    <div class="search-hotel-plus-button icon-plus" id="plus-adult"></div>
                 </div>
                 <div class="search-hotel-form-field-quantity">
                     <label for="children">Дети:</label>
-                    <div class="minus-button icon-minus" id="minus-child"></div>
+                    <div class="search-hotel-minus-button icon-minus" id="minus-child"></div>
                     <input id="children" name="children-quantity" type="text" value="0" disabled>
-                    <div class="plus-button icon-plus" id="plus-child"></div>
-
+                    <div class="search-hotel-plus-button icon-plus" id="plus-child"></div>
                 </div>
                 <input class="submit" type="submit" value="Найти">
             </form>
@@ -107,24 +98,24 @@
     <footer class="page-footer">
         <ul>
             <li class="hashtag-visitsedona">
-                <a href="https://www.google.ru/search?q=%23VISITSEDONA" class="hashtag-visitsedona">#VISITSEDONA</a>
+                <a class="hashtag-visitsedona" href="https://www.google.ru/search?q=%23VISITSEDONA">#VISITSEDONA</a>
             </li>
             <li>
                 <ul class="social-links">
                     <li>
-                        <a href="https://twitter.com" title="Наш твиттер"><i class="icon-twitter"></i></a>
+                        <a href="https://twitter.com" title="Наш твиттер"><i class="icon-twitter">Наш твиттер</i></a>
                     </li>
                     <li>
-                        <a href="https://facebook.com" title="Наш фейсбук"><i class="icon-facebook"></i></a>
+                        <a href="https://facebook.com" title="Наш фейсбук"><i class="icon-facebook">Наш фейсбук</i></a>
                     </li>
                     <li>
-                        <a href="https://youtube.com" title="Наш ютуб"><i class="icon-youtube"></i></a>
+                        <a href="https://youtube.com" title="Наш ютуб"><i class="icon-youtube"></i>Наш ютуб</a>
                     </li>
                 </ul>
             </li>
             <li>
                 <p>Website by</p>
-                <a href="https://htmlacademy.ru" class="link-htmlacademy" title="HTMLAcademy"></a>
+                <a class="link-htmlacademy" href="https://htmlacademy.ru" title="HTMLAcademy"></a>
             </li>
         </ul>
     </footer>
