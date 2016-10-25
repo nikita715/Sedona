@@ -27,52 +27,44 @@ body {
 }
 
 .page-header {
-    position: absolute;
-    left: 0;
-    right: 0;
+    position: relative;
     margin: 0 auto;
     width: 768px;
-    height: 60px;
     background: white;
-    z-index: 100;
     font-family: PTSansBold;
+    box-shadow: 0 0 5px 0 grey;
 }
 
 .page-header .sedona-link {
     position: absolute;
     left: 50%;
     margin-left: -69px;
+    z-index: 10000;
 }
 
 .page-header .main-nav {
     display: flex;
+    flex-flow: row wrap;
     margin: 0;
     padding: 0;
-    height: 100%;
+    margin-left: 6%;
+    margin-right: 6%;
     list-style: none;
-    box-sizing: border-box;
 }
 
 .page-header li {
     display: flex;
-    flex-basis: 20%;
-    flex-grow: 1;
+    flex-basis: calc(250%/11);
+    height: 60px;
 }
 
-.page-header li:nth-child(2) {
-    margin-right: 8%;
+.page-header li:nth-child(4n+2) {
+    margin-right: calc(100%/11);
 }
 
-.page-header li:nth-child(n+3) {
+.page-header li:nth-child(4n-1),
+.page-header li:nth-child(4n) {
     justify-content: flex-end;
-}
-
-.page-header li:first-child {
-    margin-left: 6%;
-}
-
-.page-header li:last-child {
-    margin-right: 6%;
 }
 
 .page-header a {
@@ -96,25 +88,27 @@ body {
     visibility: hidden;
 }
 
-.page-container .promo-image {
-    position: relative;
-    width: 100%;
-    height: 724px;
-    background-image: url(assets/images/promo-bottom-mask.png), url(assets/images/promo-image.png);
-    background-repeat: no-repeat;
-    background-size: 100% auto, cover;
-    background-position: center 554px, top center;
-}
-
 .advantages {
+    position: relative;
+    z-index: 100;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -134px;
+    padding-top: 515px;
+    background-image:
+        url(assets/images/promo-bottom-mask.png), url(assets/images/promo-image.png);
+    background-repeat: no-repeat;
+    background-position:
+        top center;
+    background-origin: border-box;
+    background-size:
+        100% 516px,
+        auto;
 }
 
 .advantages-intro {
-    height: 200px;
     flex-basis: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background: white;
     z-index: 100;
 }
@@ -122,7 +116,6 @@ body {
 .advantages-intro h2 {
     width: 500px;
     margin: 0 auto;
-    margin-top: 50px;
     text-align: center;
 }
 
@@ -134,38 +127,16 @@ body {
 }
 
 .advantage {
-    flex-basis: 33%;
-    flex-grow: 1;
-    height: 256px;
+    flex-basis: calc(100%/3);
+    flex-grow: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
 .advantage-image {
     background-repeat: no-repeat;
-    background-size: 67% 100%;
-}
-
-.advantage-title {
-    width: 151px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.advantage-number {
-    width: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-}
-
-.advantage-description {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    text-align: center;
-    overflow: hidden;
+    background-size: 67%;
 }
 
 .advantage-real-city-image {
@@ -180,6 +151,24 @@ body {
     background-image: url(assets/images/devil-bridge.png);
 }
 
+.advantage-title {
+    width: 151px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantage-number {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantage-description {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .advantage-blue-background {
     background-color: #81b3d2;
     color: white;
@@ -191,71 +180,62 @@ body {
 
 .features {
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
     width: 100%;
-    height: 330px;
     margin: 0;
     padding: 0;
+    padding-bottom: 40px;
     list-style: none;
     text-align: center;
-    overflow: hidden;
 }
 
 .features li {
-    flex-basis: 33%;
-    flex-grow: 1;
+    flex-basis: calc(100%/3);
+    flex-grow: 0;
+    background-repeat: no-repeat;
+    background-position: center 60px;
 }
 
-.features li:nth-child(1) {
+.features .icon-house {
     background-image: url(assets/images/icon-house.png);
-    background-repeat: no-repeat;
-    background-position: center 60px;
 }
 
-.features li:nth-child(2) {
+.features .icon-gift {
     background-image: url(assets/images/icon-gift.png);
-    background-repeat: no-repeat;
-    background-position: center 60px;
 }
 
-.features li:nth-child(3) {
+.features .icon-burger {
     background-image: url(assets/images/icon-burger.png);
-    background-repeat: no-repeat;
-    background-position: center 60px;
 }
 
 .features .feature-name {
-    margin-top: 165px;
+    margin-top: 160px;
 }
 
 .features .feature-description {
     width: 66%;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    overflow: hidden;
 }
 
 .search-hotel {
-    position: relative;
-    height: 900px;
     text-align: center;
+    padding-bottom: 592px;
     background-image: url(assets/images/search-map.png);
     background-repeat: no-repeat;
-    background-position: center 300px;
-    overflow: hidden;
+    background-position: center bottom;
 }
 
-.search-hotel > p:nth-child(1) {
+.search-hotel > h2 {
     margin-top: 60px;
     font-family: PTSansBold;
     font-size: 28px;
     line-height: 25px;
 }
 
-.search-hotel > p:nth-child(2) {
+.search-hotel > p {
     width: 450px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -265,21 +245,20 @@ body {
     width: 570px;
     height: 85px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 40px;
     background-color: #766357;
-    border: none;
-    text-transform: uppercase;
     text-decoration: none;
     font-size: 20px;
     font-family: PTSansBold;
-    line-height: 83px;
+    line-height: 87px;
     color: white;
     cursor: pointer;
-    outline: none;
 }
 
 .search-hotel-form {
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
     display: none;
     flex-flow: row wrap;
     width: 570px;
@@ -290,7 +269,7 @@ body {
     background-color: white;
     font-family: PTSansBold;
     font-size: 16px;
-    box-shadow: 0 0 15px 0 #797979;
+    box-shadow: 0 0 15px 0 grey;
 }
 
 .search-hotel-form-field-date {
@@ -331,10 +310,10 @@ body {
     border: 2px solid #e5e5e5;
 }
 
-.search-hotel-form .icon-calendar {
+.search-hotel-form .icon-calendar::before {
     position: absolute;
-    top: 8px;
-    right: 7px;
+    top: 12px;
+    right: 8px;
 }
 
 .search-hotel-form .icon-calendar:hover {
@@ -398,7 +377,7 @@ body {
     color: black;
 }
 
-.search-hotel .search-hotel-form .submit {
+.search-hotel-form .submit {
     position: relative;
     bottom: -30px;
     width: 100%;
@@ -412,11 +391,11 @@ body {
     color: white;
 }
 
-.search-hotel .search-hotel-form .submit:hover {
+.search-hotel-form .submit:hover {
     background-color: #669ec0;
 }
 
-.search-hotel .search-hotel-form .submit:active {
+.search-hotel-form .submit:active {
     background-color: #5496bd;
     color: #88b6d1;
 }
@@ -428,7 +407,6 @@ body {
     margin: 0 auto;
     margin-top: -120px;
     width: 768px;
-    height: 120px;
     background: white;
     z-index: 100;
     font-family: PTSansBold;
@@ -437,6 +415,7 @@ body {
 .page-footer > ul {
     display: flex;
     flex-direction: row;
+    flex-flow: row wrap;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -444,10 +423,10 @@ body {
 
 .page-footer > ul > li {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    flex-basis: 33%;
-    flex-grow: 1;
+    flex-basis: calc(100%/3);
     height: 120px;
 }
 
@@ -461,17 +440,17 @@ body {
 
 .page-footer .social-links {
     display: flex;
-    justify-content: space-between;
-    width: 155px;
-    height: 48px;
+    flex-flow: row wrap;
+    justify-content: center;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .page-footer .social-links li {
-    width: 48px;
+    flex-basis: 48px;
     height: 48px;
+    margin: 3px;
     background-color: #81b3d2;
     line-height: 48px;
     text-align: center;
@@ -505,9 +484,10 @@ body {
 }
 
 .page-footer .link-htmlacademy:hover {
-    background-image: url(assets/images/by-htmlacademy-blue.png);
+    background-position: -113px 0;
 }
 
 .page-footer .link-htmlacademy:active {
-    background-image: url(assets/images/by-htmlacademy-grey.png);
+    background-position: 0;
+    opacity: 0.5;
 }
