@@ -2,8 +2,8 @@
 /*global $, jQuery*/
 $(document).ready(function () {
     'use strict';
-    $('#search-hotel-opener').removeAttr('href');
-    $('#search-hotel-opener').click(function () {
+    $('#search-hotel-link').removeAttr('href');
+    $('#search-hotel-link').click(function () {
         var form = $('#search-hotel-form');
         if (form.css('display') !== 'flex') {
             form.css('display', 'flex');
