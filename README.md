@@ -1,2 +1,2 @@
-# Sedona.com
-Site interface for the Web UI Development course
+# WebUIDevelopmentCourse
+Site interfaces for the Web UI Development course
