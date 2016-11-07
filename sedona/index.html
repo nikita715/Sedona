@@ -3,19 +3,21 @@
 
 <head>
     <title>Седона</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="symbols-sedona.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <header class="page-header">
-        <a class="sedona-link" href="#"><img src="assets/images/header-logo.png" alt="SEDONA.COM"></a>
-        <ul class="main-nav">
-            <li><a href="#">Информация</a></li>
-            <li><a href="#">Фото и видео</a></li>
-            <li><a href="#">Карта штата</a></li>
-            <li><a href="#">Гостиницы</a></li>
-        </ul>
+        <a class="sedona-link" href="#"><img src="styles/images/header-logo.png" alt="SEDONA.COM" width="138" height="70"></a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Фото и видео</a></li>
+                <li><a href="#">Карта штата</a></li>
+                <li><a href="#">Гостиницы</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="page-container clearfix">
         <div class="advantages">
@@ -23,10 +25,12 @@
                 <h2>Седона - небольшой городок в Аризоне, заслуживающий большего</h2>
                 <p>Рассмотрим 5 причин, по которым Седона лучше, чем Гранд Каньон!</p>
             </div>
-            <div class="advantage advantage-blue-background advantage-image advantage-real-city">
-                <h2 class="advantage-title">Настоящий городок</h2>
-                <p class="advantage-number">- №1 -</p>
-                <p class="advantage-description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            <div class="advantage-with-background-container advantage-real-city-container">
+                <div class="advantage advantage-blue-background">
+                    <h2 class="advantage-title">Настоящий городок</h2>
+                    <p class="advantage-number">- №1 -</p>
+                    <p class="advantage-description">Седона - не аттракцион для туристов, там течет своя жизнь
+                </div>
             </div>
             <ul class="features">
                 <li class="feature-icon feature-icon-house">
@@ -42,10 +46,12 @@
                     <p class="feature-description">Не только китайского, но и местного производства!</p>
                 </li>
             </ul>
-            <div class="advantage advantage-blue-background advantage-image advantage-devils-bridge">
-                <h2 class="advantage-title">Там есть мост дьявола</h2>
-                <p class="advantage-number">- №2 -</p>
-                <p class="advantage-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <div class="advantage-with-background-container advantage-devils-bridge-container">
+                <div class="advantage advantage-blue-background">
+                    <h2 class="advantage-title">Там есть мост дьявола</h2>
+                    <p class="advantage-number">- №2 -</p>
+                    <p class="advantage-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                </div>
             </div>
             <div class="advantage advantage-grey-background">
                 <h2 class="advantage-title">Небольшая площадь</h2>
@@ -94,7 +100,7 @@
     </main>
     <footer class="page-footer">
         <ul>
-            <li class="hashtag-visitsedona">
+            <li>
                 <a class="hashtag-visitsedona" href="https://www.google.ru/search?q=%23VISITSEDONA">#VISITSEDONA</a>
             </li>
             <li>
@@ -116,8 +122,8 @@
             </li>
         </ul>
     </footer>
-    <script src="jquery-3.1.1.js"></script>
-    <script src="script.js"></script>
+    <script src="js/libs/jquery-3.1.1.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
