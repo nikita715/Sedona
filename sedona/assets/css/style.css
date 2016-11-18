@@ -1,18 +1,18 @@
 @font-face {
     font-family: "PTSansBold";
-    src: url('fonts/ptsansbold.woff2') format('woff2'), url('fonts/ptsansbold.woff') format('woff');
+    src: url('../fonts/ptsansbold.woff2') format('woff2'), url('../fonts/ptsansbold.woff') format('woff');
 }
 
 @font-face {
     font-family: "PTSans";
-    src: url('fonts/ptsans.woff2') format('woff2'), url('fonts/ptsans.woff') format('woff');
+    src: url('../fonts/ptsans.woff2') format('woff2'), url('../fonts/ptsans.woff') format('woff');
 }
 
 @font-face {
     font-weight: normal;
     font-style: normal;
     font-family: "symbols-sedona";
-    src: url("fonts/symbols-sedona.woff") format("woff"), url("fonts/symbols-sedona.woff2") format("woff2");
+    src: url("../fonts/symbols-sedona.woff") format("woff"), url("../fonts/symbols-sedona.woff2") format("woff2");
 }
 
 [class^="icon-"]::before,
@@ -189,7 +189,7 @@ body {
     margin: 0 auto;
     box-shadow: 0 0 5px 0 grey;
     background-color: white;
-    background-image: url(images/promo-image.jpg);
+    background-image: url(../img/promo-image.jpg);
     background-repeat: no-repeat;
 }
 
@@ -240,8 +240,8 @@ body {
 .advantage {
     flex-basis: 33%;
     flex-grow: 1;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    box-sizing: border-box;
+    padding: 30px 40px;
     text-align: center;
 }
 
@@ -254,13 +254,13 @@ body {
 
 .advantage-real-city-container {
     flex-direction: row;
-    background-image: url(images/real-city.jpg);
+    background-image: url(../img/real-city.jpg);
     margin-left: 33.3333%;
 }
 
 .advantage-devils-bridge-container {
     flex-direction: row-reverse;
-    background-image: url(images/devil-bridge.jpg);
+    background-image: url(../img/devil-bridge.jpg);
     margin-right: 33.3333%;
 }
 
@@ -290,7 +290,6 @@ body {
 }
 
 .advantage-description {
-    width: 70%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -311,15 +310,18 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    padding-bottom: 40px;
     list-style: none;
     text-align: center;
 }
 
-.features li {
+.feature {
     position: relative;
     flex-basis: 33%;
     flex-grow: 1;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
     background-repeat: no-repeat;
     background-position: center 60px;
     background-size: 76px 76px;
@@ -335,7 +337,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    background-image: url(images/features-icons.png);
+    background-image: url(../img/features-icons.png);
 }
 
 .feature-icon-house::before {
@@ -355,7 +357,6 @@ body {
 }
 
 .features .feature-description {
-    width: 66%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -363,7 +364,7 @@ body {
 .search-hotel {
     text-align: center;
     padding-bottom: 593px;
-    background-image: url(images/search-map.jpg);
+    background-image: url(../img/search-map.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
 }
@@ -409,7 +410,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    display: none;
+    display: flex;
     flex-flow: row wrap;
     width: 570px;
     height: 400px;
@@ -630,7 +631,7 @@ body {
     height: 39px;
     margin-left: 6px;
     margin-top: 5px;
-    background-image: url(images/by-htmlacademy.png);
+    background-image: url(../img/by-htmlacademy.png);
 }
 
 .page-footer .link-htmlacademy:hover {
