@@ -22,11 +22,11 @@ body {
     z-index: 100;
     display: flex;
     width: 320px;
+    min-height: 65px;
     margin: 0 auto;
     background-image: url(../img/header-layer.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
-    background-position: top, auto;
 }
 
 .site-logo {
@@ -38,9 +38,10 @@ body {
     background-image: url(../img/site-logotype-mobile.png);
     background-repeat: no-repeat;
     background-size: contain;
+    font-size: 0;
 }
 
-.main-navigation-opener {
+.main-nav-opener {
     position: absolute;
     right: 20px;
     top: 6px;
@@ -55,33 +56,40 @@ body {
     cursor: pointer;
 }
 
-.main-navigation {
-    display: flex;
+.main-nav {
+    display: none;
     flex-flow: column;
     width: 100%;
     margin-top: 65px;
+    margin-bottom: 0;
+    padding: 0;
 }
 
-.main-navigation a {
-    display: none;
+.main-nav li {
+    display: flex;
     text-align: center;
+    justify-content: center;
     line-height: 60px;
     width: 100%;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "OpenSans-Bold";
-    color: white;
-    font-size: 18px;
     border-top: 2px solid #485461;
     border-bottom: 2px solid #000000;
     background-color: #283645;
 }
 
-.main-navigation a:hover {
+.main-nav a {
+    line-height: 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "OpenSans-Bold";
+    color: white;
+    font-size: 18px;
+}
+
+.main-nav a:hover {
     color: #bb2a54;
 }
 
-.main-navigation a:active {
+.main-nav a:active {
     color: #6a757f;
 }
 
@@ -96,12 +104,14 @@ main {
 .application {
     position: absolute;
     top: -65px;
-    padding-top: 525px;
+    padding-top: 500px;
     padding-left: 20px;
     padding-right: 20px;
-    background: url(../img/back-mobile.png);
+    background: url(../img/index-banner-mobile.png);
     background-color: #283645;
     background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
 }
 
 .application-download {
@@ -112,6 +122,8 @@ main {
     font-size: 18px;
     border: 3px solid white;
     border-radius: 100px;
+    word-wrap: normal;
+    white-space: nowrap;
 }
 
 .application-download:hover {
@@ -128,7 +140,7 @@ main {
     padding-top: 130px;
     padding-bottom: 35px;
     margin: 0;
-    background-image: url(../img/logos.png);
+    background-image: url(../img/os-logo.png);
     background-repeat: no-repeat;
     background-position: center 50px;
     color: white;
@@ -137,20 +149,33 @@ main {
     line-height: 25px;
 }
 
-.features {
+.possibilities {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    padding-bottom: 320px;
-    margin-top: 235px;
-    background-image: url(../img/phone-screen-3.png), url(../img/Shape2.png);
+    padding-bottom: 350px;
+    background-image: url(../img/color-transition.png), url(../img/phone-screen.png);
     background-repeat: no-repeat;
-    background-position: bottom, 0 175px;
+    background-position: top, bottom;
+    background-size: 100%, 210px 320px;
+    background-color: #f2f2f2;
 }
 
-.features h2 {
-    flex-basis: 100%;
-    width: 700px;
+.introduction {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-top: 234px;
+    padding-top: 50px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 210px 320px;
+    background-position: bottom;
+    background-size: 100%;
+    background-color: white;
+}
+
+.introduction h2 {
     margin: 0 50px;
     margin-bottom: 40px;
     font-size: 24px;
@@ -159,17 +184,19 @@ main {
     text-align: center;
 }
 
-.features h2:first-of-type {
-    margin-top: 40px;
+.review-go-left,
+.review-go-right {
+    display: none;
+    font-size: 0;
 }
 
-.feature-phone {
+.possibility {
     position: relative;
-    margin: 0 20px;
+    padding: 0 20px;
     text-align: center;
 }
 
-.feature-phone h3 {
+.possibility h3 {
     margin-top: 10px;
     margin-bottom: -5px;
     font-size: 18px;
@@ -177,44 +204,16 @@ main {
     line-height: 24px;
 }
 
-.feature-phone p {
+.possibility p {
     font-size: 14px;
     line-height: 24px;
 }
 
-.feature-phone:first-of-type {
-    margin-top: 50px;
+.possibility:first-of-type {
+    margin-top: 60px;
 }
 
-
-/*
-.feature-phone:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: top;
-}
-
-.phone-screen-1:before {
-    background-image: url(../img/phone-screen-1.png);
-}
-
-.phone-screen-2:before {
-    background-image: url(../img/phone-screen-2.png);
-}
-
-.phone-screen-3:before {
-    background-image: url(../img/phone-screen-3.png);
-}
-*/
-
-.feature-duration {
+.effect-time {
     display: none;
 }
 
@@ -224,39 +223,7 @@ main {
     padding-right: 20px;
     padding-bottom: 50px;
     padding-top: 50px;
-    /*
-    padding-top: 200px;
-    background-image: url(../img/quotes.png);
-    background-repeat: no-repeat;
-    background-position: center 70px;*/
 }
-
-
-/*
-.reviews:before {
-    content: "";
-    position: absolute;
-    background-image: url(../img/left-arrow.png);
-    background-repeat: no-repeat;
-    width: 22px;
-    height: 41px;
-    left: 130px;
-    top: 220px;
-    cursor: pointer;
-}
-
-.reviews:after {
-    content: "";
-    position: absolute;
-    background-image: url(../img/right-arrow.png);
-    background-repeat: no-repeat;
-    width: 22px;
-    height: 41px;
-    right: 130px;
-    top: 220px;
-    cursor: pointer;
-}
-*/
 
 .review {
     display: flex;
@@ -290,62 +257,48 @@ main {
 .review-selector {
     height: 6px;
     margin-top: 40px;
-    background-image: url(../img/qwe.png);
+    background-image: url(../img/triple-selector.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .versions {
-    padding-left: 130px;
-    padding-right: 130px;
-    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 90px;
     padding-bottom: 50px;
-    background-image: url(../img/versions-background.png);
+    background-image: url(../img/color-transition.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
+    background-color: #f2f2f2;
     overflow: hidden;
 }
 
 .versions-table {
-    display: flex;
-    flex-flow: column;
-    width: 2000%;
-    transform: translateX(-60%);
+    width: 100%;
     overflow: hidden;
+    border-collapse: collapse;
+    table-layout: inherit;
 }
 
-.versions-table-row {
-    display: flex;
+.versions-table tr {
+    width: 100%;
 }
 
-.versions-table-row:last-child {
-    border-bottom: 2px solid #e5e5e5;
-}
-
-.versions-table-row div:last-child {
-    border-right: 2px solid #e5e5e5;
-}
-
-.versions-table-head-row {
-    justify-content: flex-end;
-}
-
-.versions-table-row div {
-    display: flex;
+.versions-table td,
+.versions-table th {
     align-items: center;
+    height: 45px;
     width: 25%;
-    height: 60px;
     padding-left: 20px;
     box-sizing: border-box;
     border-collapse: collapse;
-    border-top: 2px solid #e5e5e5;
-    border-left: 2px solid #e5e5e5;
+    border: 2px solid #e5e5e5;
     background-color: white;
     overflow: hidden;
 }
 
-.versions-table-head-row div {
-    display: flex;
+.versions-table th {
     flex-flow: column wrap;
     justify-content: center;
     height: 100px;
@@ -355,21 +308,28 @@ main {
     box-sizing: border-box;
 }
 
+.versions-table th:first-child {
+    background-color: transparent;
+    border: none;
+}
+
 .version-name {
     margin-bottom: 5px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
+    line-height: 30px;
 }
 
 .version-price {
     font-size: 24px;
+    line-height: 30px;
+    font-family: "OpenSans";
+    font-weight: normal;
 }
 
 .version-popular {
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/hit.png);
+    background-image: url(../img/popular-banner.png);
     background-repeat: no-repeat;
 }
 
@@ -394,7 +354,7 @@ main {
 .version-selector {
     height: 6px;
     margin-top: 40px;
-    background-image: url(../img/qwe.png);
+    background-image: url(../img/triple-selector.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -403,10 +363,10 @@ main {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding-bottom: 220px;
+    padding-bottom: 230px;
     padding-left: 20px;
     padding-right: 20px;
-    background-image: url(../img/map-2.jpg);
+    background-image: url(../img/map-mobile.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
 }
@@ -414,7 +374,7 @@ main {
 .contacts h2 {
     flex-basis: 100%;
     margin-top: 50px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-size: 24px;
     font-weight: normal;
     color: #283645;
@@ -425,7 +385,7 @@ main {
 .contact {
     flex-basis: 100%;
     flex-grow: 1;
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
     line-height: 30px;
 }
@@ -447,27 +407,27 @@ main {
     margin: 0 auto;
 }
 
-.footer-columns {
+.main-footer-columns {
     display: flex;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.contact-e-mail {
+.e-mail {
     cursor: pointer;
 }
 
-.contact-e-mail:hover {
+.e-mail:hover {
     color: #283645;
     text-decoration: underline;
 }
 
-.contact-e-mail:active {
+.e-mail:active {
     color: #bec2c7;
 }
 
-.footer-columns li {
+.main-footer-columns li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -508,7 +468,7 @@ main {
     background-image: url(../img/youtube-logo.png);
 }
 
-.footer-copyright a {
+.main-footer-copyright a {
     width: 27px;
     height: 41px;
     margin-left: 10px;
@@ -518,296 +478,140 @@ main {
 
 @media(min-width: 768px) {
     .main-header {
-        position: relative;
-        z-index: 100;
-        display: flex;
-        width: 728px;
-        margin: 0 auto;
-        background-image: url(../img/header-layer.png);
-        background-size: 100% 100%;
+        width: 768px;
+        min-height: 110px;
     }
     .site-logo {
-        position: absolute;
         top: 27px;
         left: 40px;
         width: 147px;
         height: 56px;
         background-image: url(../img/logotype-white-tablet.png);
-        background-repeat: no-repeat;
-        background-size: contain;
     }
-    .site-logo:hover {}
-    .site-logo:active {}
-    .main-navigation-opener {
+    .site-logo:hover {
+        background-image: url(../img/logotype-white-tablet.png);
+    }
+    .site-logo:active {
+        background-image: url(../img/logotype-white-tablet.png);
+    }
+    .main-nav-opener {
         position: absolute;
         right: 40px;
         top: 26px;
         height: 50px;
         width: 50px;
-        font-size: 0;
-        background-image: url(../img/menu-burger.png);
-        background-color: transparent;
-        background-repeat: no-repeat;
-        background-position: center;
-        border: none;
-        cursor: pointer;
     }
-    .main-navigation {
-        display: flex;
-        flex-flow: column;
-        width: 100%;
+    .main-nav {
         margin-top: 110px;
     }
     main {
-        position: relative;
-        width: 728px;
-        margin: 0 auto;
-        padding-top: 460px;
-        background-repeat: no-repeat;
+        width: 768px;
     }
     .application {
-        position: absolute;
         top: -110px;
         width: 100%;
-        padding-top: 737px;
+        height: 800px;
         padding-left: 40px;
         padding-right: 40px;
         box-sizing: border-box;
         background: url(../img/index-banner-tablet.png);
-        background-size: 100%;
-        background-color: #283645;
-        background-repeat: no-repeat;
+        background-size: cover;
     }
     .application-download {
         position: absolute;
-        left: 60px;
+        left: 40px;
         top: 400px;
-        padding: 12px 36px;
-        color: white;
-        text-decoration: none;
-        font-family: "OpenSans-Bold";
-        font-size: 18px;
-        border: 3px solid white;
+        padding: 16px 62px;
         border-radius: 100px;
     }
     .application-os {
         display: none;
-        padding-top: 130px;
-        padding-bottom: 35px;
+    }
+    .introduction {
+        margin-top: 230px;
+    }
+    .introduction h2 {
         margin: 0;
-        background-image: url(../img/logos.png);
-        background-repeat: no-repeat;
-        background-position: center 50px;
-        color: white;
-        text-align: center;
-        font-size: 14px;
-        line-height: 25px;
-    }
-    .features {
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
-        padding-bottom: 20px;
-        margin-top: 235px;
-        background-image: url(../img/phone-screen.png), url(../img/Shape2.png);
-        background-repeat: no-repeat;
-        background-size: auto, 100%;
-        background-position: 45px 210px, 0 120px;
-    }
-    .features h2 {
-        width: 607.3px;
-        margin: 0 40px;
         font-size: 40px;
-        line-height: 48px;
-        font-weight: normal;
-        color: #283645;
-        text-align: center;
     }
-    .features h2:last-of-type {
-        margin-bottom: 80px;
+    .possibilities {
+        padding-bottom: 20px;
+        margin-top: 60px;
+        background-image:
+            url(../img/iphone-screen.png), url(../img/color-transition-tablet.png);
+        background-size: auto, 100%;
+        background-position: 45px top, top;
     }
-    .feature-phone {
-        position: relative;
-        flex-basis: 100%;
-        margin: 0 20px;
+    .possibility {
+        margin-right: 20px;
         margin-left: 50%;
         text-align: left;
     }
-    .feature-duration {
-        display: block;
-        margin: 0 40px;
-        padding-top: 60px;
-        padding-left: 45%;
+    .effect-time {
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top: 80px;
+        padding-left: 385px;
+        padding-right: 40px;
         padding-bottom: 100px;
-        background-image: url(../img/timer-1.png);
+        background-image: url(../img/timer.png);
         background-repeat: no-repeat;
-        background-position: 0 center;
+        background-position: 40px center;
+        background-size: 238px 276px;
     }
-    .feature-duration h3 {
-        margin-top: 30px;
+    .effect-time h3 {
         margin-bottom: 0;
         font-size: 30px;
         font-family: "OpenSans-Bold";
-        line-height: 36px;
     }
-    .feature-duration p {
+    .effect-time p {
         font-size: 14px;
         line-height: 24px;
     }
-    .feature-duration a {
+    .effect-time a {
         color: #d22856;
-    }
-    .reviews {
-        position: relative;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 50px;
-        padding-top: 50px;
-        /*
-    padding-top: 200px;
-    background-image: url(../img/quotes.png);
-    background-repeat: no-repeat;
-    background-position: center 70px;*/
-    }
-    .review {
-        display: flex;
-        flex-flow: column;
-        padding: 0 40px;
-        text-align: center;
         font-size: 14px;
     }
-    .review-text {
-        width: 100%;
-        margin: 0 auto;
+    .reviews {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .review {
         margin-top: 30px;
+    }
+    .review-text {
+        margin: 0 auto;
         font-size: 18px;
-        line-height: 30px;
     }
     .review-author {
         margin-top: 40px;
-        margin-bottom: 0;
         font-size: 20px;
-        font-family: "OpenSans-Bold";
         order: 2;
     }
     .review-bio {
         display: inline;
-        margin-top: 10px;
-        margin-bottom: 0;
         order: 3;
-    }
-    .review-selector {
-        height: 6px;
-        margin-top: 40px;
-        background-image: url(../img/qwe.png);
-        background-repeat: no-repeat;
-        background-position: center;
     }
     .versions {
         padding-left: 40px;
         padding-right: 40px;
         padding-top: 120px;
-        padding-bottom: 50px;
-        background-image: url(../img/versions-background.png);
+        background-image: url(../img/color-transition-tablet.png);
         background-repeat: no-repeat;
-        background-position: center top;
-        overflow: hidden;
+        background-size: contain;
     }
-    .versions-table {
-        display: flex;
-        flex-flow: column;
-        width: 100%;
-        overflow: hidden;
-        transform: none;
-    }
-    .versions-table-row {
-        display: flex;
-    }
-    .versions-table-row:last-child {
-        border-bottom: 2px solid #e5e5e5;
-    }
-    .versions-table-row div:last-child {
-        border-right: 2px solid #e5e5e5;
-    }
-    .versions-table-head-row {
-        justify-content: flex-end;
-    }
-    .versions-table-row div {
-        display: flex;
-        align-items: center;
-        width: 25%;
-        height: 45px;
-        padding-left: 20px;
-        box-sizing: border-box;
-        border-collapse: collapse;
-        border-top: 2px solid #e5e5e5;
-        border-left: 2px solid #e5e5e5;
-        background-color: white;
-        overflow: hidden;
-    }
-    .versions-table-row:not(:first-child) div:first-child {
+    .versions-table td:first-child {
         font-size: 14px;
     }
-    .versions-table-head-row div {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        height: 78px;
-        padding: 0;
-        background-color: #283645;
-        color: white;
-        box-sizing: border-box;
-    }
-    .version-name {
-        margin-bottom: 5px;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    .version-price {
-        font-size: 18px;
-    }
-    .version-popular {
-        position: relative;
-        z-index: 100;
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/hit.png);
-        background-repeat: no-repeat;
-    }
-    .version-yes-sign {
-        width: 100%;
-        height: 100%;
-        font-size: 0;
-        background-image: url(../img/yes-sign.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .version-no-sign {
-        width: 100%;
-        height: 100%;
-        font-size: 0;
-        background-image: url(../img/no-sign.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .version-selector {
-        height: 6px;
-        margin-top: 20px;
-        background-image: none;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
     .contacts {
-        display: flex;
         flex-flow: row wrap;
-        justify-content: center;
-        padding-bottom: 380px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-bottom: 420px;
+        padding-left: 40px;
+        padding-right: 40px;
         background-image: url(../img/map-tablet.jpg);
         background-position: bottom;
-        background-repeat: no-repeat;
         background-size: contain;
     }
     .contacts h2 {
@@ -827,42 +631,26 @@ main {
         text-align: center;
         line-height: 30px;
     }
-    .contact:last-of-type {
-        margin-bottom: 30px;
-    }
     .main-footer {
         display: block;
         width: 768px;
         margin: 0 auto;
     }
 }
+
 @media(min-width: 1200px) {
     .main-header {
-        position: relative;
-        z-index: 100;
-        display: flex;
-        flex-flow: row nowrap;
         width: 1200px;
-        margin: 0 auto;
-        background-image: url(../img/header-layer.png);
-        background-size: 100% 100%;
     }
     .site-logo {
-        position: absolute;
         top: 27px;
         left: 130px;
-        width: 147px;
-        height: 56px;
         background-image: url(../img/site-logotype.png);
-        background-repeat: no-repeat;
-        background-size: contain;
     }
-    .site-logo:hover {}
-    .site-logo:active {}
-    .main-navigation-opener {
+    .main-nav-opener {
         display: none;
     }
-    .main-navigation {
+    .main-nav {
         display: flex;
         align-items: center;
         flex-flow: row wrap;
@@ -871,7 +659,7 @@ main {
         margin-left: 367px;
         margin-right: 130px;
     }
-    .main-navigation a {
+    .main-nav li {
         display: inline;
         width: auto;
         padding-left: 40px;
@@ -879,76 +667,56 @@ main {
         color: white;
         background: none;
         border: none;
+    }
+    .main-nav a {
         text-transform: none;
-        font-family: "OpenSans";
+    }
+    .main-nav .main-nav-active {
+        border-bottom: 2px solid white;
+    }
+    .main-nav .main-nav-active:hover {
+        border-color: #bb2a54;
+    }
+    .main-nav .main-nav-active:active {
+        border-color: #6a757f;
     }
     main {
-        position: relative;
         width: 1200px;
-        margin: 0 auto;
-        padding-top: 460px;
-        background-repeat: no-repeat;
     }
     .application {
-        position: absolute;
-        top: -110px;
-        width: 100%;
-        padding-top: 805px;
-        padding-left: 130px;
-        padding-right: 130px;
-        box-sizing: border-box;
+        height: 850px;
         background: url(../img/index-banner.png);
-        background-size: 100%;
-        background-color: #283645;
-        background-repeat: no-repeat;
     }
     .application-download {
         position: absolute;
-        left: 140px;
+        left: 130px;
         top: 430px;
-        padding: 12px 36px;
-        color: white;
-        text-decoration: none;
-        font-family: "OpenSans-Bold";
-        font-size: 18px;
-        border: 3px solid white;
-        border-radius: 100px;
+        padding: 12px 45px;
     }
-    .features {
-        display: flex;
+    .introduction {
+        flex-flow: column;
+        margin-top: 280px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .possibilities {
         justify-content: space-between;
-        flex-flow: row wrap;
-        padding: 0 130px;
-        padding-bottom: 20px;
-        margin-top: 235px;
-        background-image: url(../img/Shape2.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: 0 120px;
+        padding-left: 130px;
+        padding-right: 130px;
+        margin: 0;
+        background-image: url(../img/color-transition-desktop.png);
+        background-position: top;
     }
-    .features h2 {
-        width: 607.3px;
-        margin: 0 40px;
-        font-size: 40px;
-        line-height: 48px;
-        font-weight: normal;
-        color: #283645;
-        text-align: center;
-    }
-    .features h2:last-of-type {
-        margin-bottom: 80px;
-    }
-    .feature-phone {
-        position: relative;
-        flex-basis: 280px;
+    .possibility {
+        flex-basis: 273px;
         margin: 0;
         padding-top: 340px;
         text-align: center;
     }
-    .feature-phone:first-of-type {
+    .possibility:first-of-type {
         margin: 0;
     }
-    .feature-phone:before {
+    .possibility:before {
         content: "";
         position: absolute;
         left: 0;
@@ -960,227 +728,100 @@ main {
         background-repeat: no-repeat;
         background-position: top;
     }
-    .feature-phone h3 {
-        font-size: 30px;
-        line-height: 30px;
-    }
-    .feature-phone p {
-        padding: 0 20px;
-        font-size: 18px;
-        line-height: 30px;
-    }
     .phone-screen-1:before {
         background-image: url(../img/phone-screen-1.png);
     }
-
     .phone-screen-2:before {
         background-image: url(../img/phone-screen-2.png);
     }
-
     .phone-screen-3:before {
         background-image: url(../img/phone-screen-3.png);
     }
-    .feature-duration {
-        display: block;
-        margin: 0 0;
-        padding-top: 60px;
-        padding-left: 40%;
-        padding-bottom: 100px;
-        padding-right: 130px;
-        background-image: url(../img/timer-1.png);
-        background-repeat: no-repeat;
-        background-position: 150px center;
-        background-color: #f2f2f2;
-    }
-    .feature-duration h3 {
-        margin-top: 30px;
-        margin-bottom: 0;
+    .possibility h3 {
         font-size: 30px;
-        font-family: "OpenSans-Bold";
-        line-height: 36px;
+        line-height: 30px;
     }
-    .feature-duration p {
+    .possibility p {
+        margin-top: 30px;
+        padding: 0 15px;
         font-size: 18px;
         line-height: 30px;
     }
-    .feature-duration a {
-        color: #d22856;
+    .effect-time {
+        padding-left: 42%;
+        padding-right: 130px;
+        padding-bottom: 130px;
+        background-position: 150px center;
+        background-color: #f2f2f2;
+        background-size: 298px 345px;
+    }
+    .effect-time p {
+        font-size: 18px;
+        line-height: 30px;
     }
     .reviews {
-        position: relative;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 50px;
-        padding-top: 50px;
-        padding-top: 200px;
+        padding-left: 130px;
+        padding-right: 130px;
+        padding-bottom: 80px;
+        padding-top: 170px;
         background-image: url(../img/quotes.png);
         background-repeat: no-repeat;
         background-position: center 70px;
     }
-    .review {
-        display: flex;
-        flex-flow: column;
-        padding: 0 40px;
-        text-align: center;
-        font-size: 14px;
+    .review-go-left,
+    .review-go-right {
+        display: block;
+        position: absolute;
+        top: 220px;
+        width: 22px;
+        height: 41px;
+        font-size: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .review-go-left {
+        left: 130px;
+        background-image: url(../img/left-arrow.png);
+    }
+    .review-go-right {
+        right: 130px;
+        background-image: url(../img/right-arrow.png);
     }
     .review-text {
         width: 80%;
-        margin: 0 auto;
-        margin-top: 10px;
-        font-size: 18px;
-        line-height: 30px;
     }
     .review-author {
         margin-top: 20px;
-        margin-bottom: 0;
-        font-size: 20px;
-        font-family: "OpenSans-Bold";
-        order: 2;
     }
     .review-bio {
-        display: inline;
         margin-top: 10px;
-        margin-bottom: 0;
-        order: 3;
     }
     .review-selector {
-        height: 6px;
-        margin-top: 40px;
-        background-image: none;
-        background-repeat: no-repeat;
-        background-position: center;
+        display: none;
     }
     .versions {
         padding-left: 130px;
         padding-right: 130px;
         padding-top: 160px;
-        padding-bottom: 50px;
-        background-image: url(../img/versions-background.png);
-        background-repeat: no-repeat;
-        background-position: center top;
+        padding-bottom: 80px;
+        background-image: url(../img/color-transition-desktop.png);
         overflow: hidden;
-    }
-    .versions-table {
-        display: flex;
-        flex-flow: column;
-        width: 100%;
-        overflow: hidden;
-        transform: none;
-    }
-    .versions-table-row {
-        display: flex;
-    }
-    .versions-table-row:last-child {
-        border-bottom: 2px solid #e5e5e5;
-    }
-    .versions-table-row div:last-child {
-        border-right: 2px solid #e5e5e5;
-    }
-    .versions-table-head-row {
-        justify-content: flex-end;
-    }
-    .versions-table-row div {
-        display: flex;
-        align-items: center;
-        width: 25%;
-        height: 59px;
-        padding-left: 20px;
-        box-sizing: border-box;
-        border-collapse: collapse;
-        border-top: 2px solid #e5e5e5;
-        border-left: 2px solid #e5e5e5;
-        background-color: white;
-        overflow: hidden;
-    }
-    .versions-table-row:not(:first-child) div:first-child {
-        font-size: 14px;
-    }
-    .versions-table-head-row div {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        height: 78px;
-        padding: 0;
-        background-color: #283645;
-        color: white;
-        box-sizing: border-box;
-    }
-    .version-name {
-        margin-bottom: 5px;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    .version-price {
-        font-size: 18px;
-    }
-    .version-popular {
-        position: relative;
-        z-index: 100;
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/hit.png);
-        background-repeat: no-repeat;
-    }
-    .version-yes-sign {
-        width: 100%;
-        height: 100%;
-        font-size: 0;
-        background-image: url(../img/yes-sign.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .version-no-sign {
-        width: 100%;
-        height: 100%;
-        font-size: 0;
-        background-image: url(../img/no-sign.png);
-        background-repeat: no-repeat;
-        background-position: center;
     }
     .version-selector {
-        height: 6px;
-        margin-top: 20px;
-        background-image: none;
-        background-repeat: no-repeat;
-        background-position: center;
+        display: none;
     }
     .contacts {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        padding-bottom: 500px;
-        padding-left: 20px;
-        padding-right: 20px;
-        background-image: url(../img/map.png);
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    .contacts h2 {
-        flex-basis: 100%;
-        margin-top: 50px;
-        margin-bottom: 0;
-        font-size: 40px;
-        font-weight: normal;
-        color: #283645;
-        text-align: center;
-        line-height: normal;
+        padding-bottom: 550px;
+        padding-left: 130px;
+        padding-right: 130px;
+        background-image: url(../img/map-desktop.jpg);
     }
     .contact {
         flex-basis: 33%;
         flex-grow: 1;
-        margin-top: 30px;
-        text-align: center;
-        line-height: 30px;
-    }
-    .contact:last-of-type {
-        margin-bottom: 30px;
     }
     .main-footer {
-        display: block;
         width: 1200px;
-        margin: 0 auto;
     }
 }
