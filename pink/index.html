@@ -3,14 +3,20 @@
 
 <head>
     <title>Pink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header class="main-header">
-        <a class="site-logo" href="#" title="Pink">Pink</a>
-        <button class="main-nav-opener">Открыть ссылки</button>
+        <a href="#">
+            <img class="site-logo site-logo-mobile" src="assets/img/site-logotype-mobile.png" width="75" height="22">
+            <img class="site-logo site-logo-tablet-white" src="assets/img/logotype-white-tablet.png" width="147" height="56">
+            <img class="site-logo site-logo-desktop" src="assets/img/site-logotype.png" width="147" height="40">
+        </a>
+        <input type="checkbox" class="main-nav-opener-checkbox" id="main-nav-opener-checkbox">
+        <label class="main-nav-opener" for="main-nav-opener-checkbox"></label>
         <ul class="main-nav">
             <li>
                 <a class="main-nav-active" href="#">Главная</a>
@@ -86,21 +92,21 @@
                 </tr>
                 <tr>
                     <td>Розовый фильтр</td>
-                    <td class="version-yes-sign">Есть</td>
-                    <td class="version-yes-sign">Есть</td>
-                    <td class="version-yes-sign">Есть</td>
+                    <td class="version-yes-sign">Розовый фильтр</td>
+                    <td class="version-yes-sign">Розовый фильтр</td>
+                    <td class="version-yes-sign">Розовый фильтр</td>
                 </tr>
                 <tr>
                     <td>Смайлики</td>
-                    <td class="version-no-sign">Нет</td>
-                    <td class="version-yes-sign">Есть</td>
-                    <td class="version-yes-sign">Есть</td>
+                    <td class="version-no-sign">Смайлики</td>
+                    <td class="version-yes-sign">Смайлики</td>
+                    <td class="version-yes-sign">Смайлики</td>
                 </tr>
                 <tr>
                     <td>Комментарии</td>
-                    <td class="version-no-sign">Нет</td>
-                    <td class="version-no-sign">Нет</td>
-                    <td class="version-yes-sign">Есть</td>
+                    <td class="version-no-sign">Комментарии</td>
+                    <td class="version-no-sign">Комментарии</td>
+                    <td class="version-yes-sign">Комментарии</td>
                 </tr>
             </table>
             <div class="version-selector"></div>
@@ -126,7 +132,8 @@
         <ul class="main-footer-columns">
             <li class="main-footer-logo">
                 <a href="#">
-                    <img src="assets/img/footer-logo.png" alt="PINK" width="147px" height="57px">
+                    <img class="footer-logo site-logo-tablet-white" src="assets/img/footer-logo-tablet.png" width="147" height="40">
+                    <img class="footer-logo site-logo-desktop" src="assets/img/footer-logo.png" width="147" height="40">
                 </a>
             </li>
             <li class="main-footer-social">
@@ -139,8 +146,6 @@
             </li>
         </ul>
     </footer>
-    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
-    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
