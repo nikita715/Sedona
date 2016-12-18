@@ -10,25 +10,27 @@
 
 <body>
     <header class="main-header">
-        <a href="#">
-            <img class="site-logo site-logo-mobile" src="assets/img/site-logotype-mobile.png" width="75" height="22">
-            <img class="site-logo site-logo-tablet-white" src="assets/img/logotype-white-tablet.png" width="147" height="56">
-            <img class="site-logo site-logo-desktop" src="assets/img/site-logotype.png" width="147" height="40">
+        <a class="main-header-site-link" href="#">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="assets/img/site-logotype.png">
+                <source media="(min-width: 768px)" srcset="assets/img/logotype-white-tablet.png">
+                <img class="site-logo" src="assets/img/site-logotype-mobile.png" width="75" height="22">
+            </picture>
         </a>
         <input type="checkbox" class="main-nav-opener-checkbox" id="main-nav-opener-checkbox">
         <label class="main-nav-opener" for="main-nav-opener-checkbox"></label>
-        <ul class="main-nav">
-            <li>
-                <a class="main-nav-active" href="#">Главная</a>
+        <ul class="main-nav-list">
+            <li class="main-nav-item">
+                <a class="main-nav-link main-nav-active-link" href="#">Главная</a>
             </li>
-            <li>
-                <a href="#">Новости</a>
+            <li class="main-nav-item">
+                <a class="main-nav-link" href="#">Новости</a>
             </li>
-            <li>
-                <a href="#">Конкурс</a>
+            <li class="main-nav-item">
+                <a class="main-nav-link" href="#">Конкурс</a>
             </li>
-            <li>
-                <a href="#">HTML Academy</a>
+            <li class="main-nav-item">
+                <a class="main-nav-link" href="#">HTML Academy</a>
             </li>
         </ul>
     </header>
@@ -91,22 +93,22 @@
                     </th>
                 </tr>
                 <tr>
-                    <td>Розовый фильтр</td>
-                    <td class="version-yes-sign">Розовый фильтр</td>
-                    <td class="version-yes-sign">Розовый фильтр</td>
-                    <td class="version-yes-sign">Розовый фильтр</td>
+                    <td class="version-feature-row-name">Розовый фильтр</td>
+                    <td class="version-yes-sign">Розовый фильтр<span class="version-feature-presence"> - Есть</span></td>
+                    <td class="version-yes-sign">Розовый фильтр<span class="version-feature-presence"> - Есть</span></td>
+                    <td class="version-yes-sign">Розовый фильтр<span class="version-feature-presence"> - Есть</span></td>
                 </tr>
                 <tr>
-                    <td>Смайлики</td>
-                    <td class="version-no-sign">Смайлики</td>
-                    <td class="version-yes-sign">Смайлики</td>
-                    <td class="version-yes-sign">Смайлики</td>
+                    <td class="version-feature-row-name">Смайлики</td>
+                    <td class="version-no-sign">Смайлики<span class="version-feature-presence"> - Нет</span></td>
+                    <td class="version-yes-sign">Смайлики<span class="version-feature-presence"> - Есть</span></td>
+                    <td class="version-yes-sign">Смайлики<span class="version-feature-presence"> - Есть</span></td>
                 </tr>
                 <tr>
-                    <td>Комментарии</td>
-                    <td class="version-no-sign">Комментарии</td>
-                    <td class="version-no-sign">Комментарии</td>
-                    <td class="version-yes-sign">Комментарии</td>
+                    <td class="version-feature-row-name">Комментарии</td>
+                    <td class="version-no-sign">Комментарии<span class="version-feature-presence"> - Нет</span></td>
+                    <td class="version-no-sign">Комментарии<span class="version-feature-presence"> - Нет</span></td>
+                    <td class="version-yes-sign">Комментарии<span class="version-feature-presence"> - Есть</span></td>
                 </tr>
             </table>
             <div class="version-selector"></div>
@@ -129,19 +131,21 @@
         </section>
     </main>
     <footer class="main-footer">
-        <ul class="main-footer-columns">
-            <li class="main-footer-logo">
-                <a href="#">
-                    <img class="footer-logo site-logo-tablet-white" src="assets/img/footer-logo-tablet.png" width="147" height="40">
-                    <img class="footer-logo site-logo-desktop" src="assets/img/footer-logo.png" width="147" height="40">
+        <ul class="main-footer-list">
+            <li class="main-footer-item-logo">
+                <a class="main-footer-site-link" href="#">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="assets/img/footer-logo.png">
+                        <img class="footer-logo" src="assets/img/footer-logo-tablet.png" width="145" height="56">
+                    </picture>
                 </a>
             </li>
-            <li class="main-footer-social">
+            <li class="main-footer-item-social">
                 <a class="social-btn social-btn-twitter" href="#" title="Twitter">Twitter</a>
                 <a class="social-btn social-btn-facebook" href="#" title="Facebook">Facebook</a>
                 <a class="social-btn social-btn-youtube" href="#" title="Youtube">Youtube</a>
             </li>
-            <li class="main-footer-copyright">
+            <li class="main-footer-item-copyright">
                 Разработано <a href="https://htmlacademy.ru">HTML Academy</a>
             </li>
         </ul>
