@@ -13,7 +13,10 @@
         <h1 class="page-header__h1">Sedona</h1>
         <div class="page-header__container">
             <a class="main-site-link" href="#">
-                <img src="assets/img/logotype-mobile.png" alt="SEDONA.COM" width="102" height="83">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="assets/img/logotype-desktop.png">
+                    <img class="site-logo" src="assets/img/logotype-mobile.png" alt="SEDONA.COM">
+                </picture>
             </a>
             <label class="main-nav-opener" for="main-nav-checkbox"></label>
             <input class="main-nav-checkbox" id="main-nav-checkbox" type="checkbox">
@@ -34,43 +37,71 @@
         </section>
         <section class="photographs-section">
             <div class="photo-post photo-post--big">
-                <img class="photo-post__img" src="assets/img/photo-1-tablet.jpg">
-                <div class="photo-post__description">
-                    <h3 class="photo-post__title">Неродные просторы</h3>
-                    <p class="photo-post__author">Автор фото: Борис</p>
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="assets/img/photo-1-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="assets/img/photo-1-tablet.jpg">
+                    <img class="photo-post__img" src="assets/img/photo-1-mobile.jpg" alt="SEDONA.COM">
+                </picture>
+                <div class="photo-post__info">
+                    <div class="photo-post__description">
+                        <h3 class="photo-post__title">Неродные просторы</h3>
+                        <p class="photo-post__author">Автор фото: Борис</p>
+                    </div>
+                    <p class="photo-post__likes">1350<span class="hidden"> лайков</span></p>
                 </div>
-                <p class="photo-post__likes">1350<span class="hidden"> лайков</span></p>
             </div>
             <div class="photo-post">
-                <img class="photo-post__img" src="assets/img/photo-2-tablet.jpg">
-                <div class="photo-post__description">
-                    <h3 class="photo-post__title">Местная растительность</h3>
-                    <p class="photo-post__author">Автор фото: Сергей</p>
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="assets/img/photo-2-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="assets/img/photo-2-tablet.jpg">
+                    <img class="photo-post__img" src="assets/img/photo-2-mobile.jpg" alt="SEDONA.COM">
+                </picture>
+                <div class="photo-post__info">
+                    <div class="photo-post__description">
+                        <h3 class="photo-post__title">Местная растительность</h3>
+                        <p class="photo-post__author">Автор фото: Сергей</p>
+                    </div>
+                    <p class="photo-post__likes">143<span class="hidden"> лайков</span></p>
                 </div>
-                <p class="photo-post__likes">143<span class="hidden"> лайков</span></p>
             </div>
             <div class="photo-post">
-                <img class="photo-post__img" src="assets/img/photo-3-tablet.jpg">
-                <div class="photo-post__description">
-                    <h3 class="photo-post__title">Дорога на север</h3>
-                    <p class="photo-post__author">Автор фото: Петр</p>
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="assets/img/photo-3-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="assets/img/photo-3-tablet.jpg">
+                    <img class="photo-post__img" src="assets/img/photo-3-mobile.jpg" alt="SEDONA.COM">
+                </picture>
+                <div class="photo-post__info">
+                    <div class="photo-post__description">
+                        <h3 class="photo-post__title">Дорога на север</h3>
+                        <p class="photo-post__author">Автор фото: Петр</p>
+                    </div>
+                    <p class="photo-post__likes">96<span class="hidden"> лайков</span></p>
                 </div>
-                <p class="photo-post__likes">96<span class="hidden"> лайков</span></p>
             </div>
             <div class="photo-post">
-                <img class="photo-post__img" src="assets/img/photo-4-tablet.jpg">
-                <div class="photo-post__description">
-                    <h3 class="photo-post__title">Мост дьявола</h3>
-                    <p class="photo-post__author">Автор фото: Антон</p>
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="assets/img/photo-4-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="assets/img/photo-4-tablet.jpg">
+                    <img class="photo-post__img" src="assets/img/photo-4-mobile.jpg" alt="SEDONA.COM">
+                </picture>
+                <div class="photo-post__info">
+                    <div class="photo-post__description">
+                        <h3 class="photo-post__title">Мост дьявола</h3>
+                        <p class="photo-post__author">Автор фото: Антон</p>
+                    </div>
+                    <p class="photo-post__likes">254<span class="hidden"> лайков</span></p>
                 </div>
-                <p class="photo-post__likes">254<span class="hidden"> лайков</span></p>
             </div>
         </section>
         <section class="video-section">
             <h2>Все еще сомневаетесь?</h2>
             <p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
             <div class="video-panel">
-                <img class="video-panel__video" src="assets/img/video-tablet.jpg" width="320px" height="201px">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="assets/img/video-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="assets/img/video-tablet.jpg">
+                    <img class="video-panel__video" src="assets/img/video.jpg" alt="SEDONA.COM">
+                </picture>
                 <div class="video-panel__controller">
                     <button class="video-panel__button video-panel__replay">Сначала</button>
                     <div class="video-panel__scroller">
@@ -100,7 +131,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="page-footer__item">
+            <li class="page-footer__item page-footer__htmlacademy-item">
                 <p>Разработано</p>
                 <a class="link-htmlacademy" href="https://htmlacademy.ru" title="HTMLAcademy"></a>
             </li>
