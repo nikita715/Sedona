@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Седона</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1 class="page-header__h1">Sedona</h1>
+        <div class="page-header__container">
+            <a class="main-site-link" href="#">
+                <img src="assets/img/logotype-mobile.png" alt="SEDONA.COM" width="102" height="83">
+            </a>
+            <label class="main-nav-opener" for="main-nav-checkbox"></label>
+            <input class="main-nav-checkbox" id="main-nav-checkbox" type="checkbox">
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Фото и видео</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Форма отзыва</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="page-container">
+        <section class="introduction">
+            <h2>Фото и видео</h2>
+            <p>Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
+        </section>
+        <section class="photographs-section">
+            <div class="photo-post">
+                <img class="photo-post__img" src="assets/img/photo-1-mobile.jpg">
+                <h3 class="photo-post__title">Неродные просторы</h3>
+                <p class="photo-post__author">Автор фото: Борис</p>
+                <p class="photo-post__likes">1350<span class="hidden"> лайков</span></p>
+            </div>
+            <div class="photo-post">
+                <img class="photo-post__img" src="assets/img/photo-2-mobile.jpg">
+                <h3 class="photo-post__title">Местная растительность</h3>
+                <p class="photo-post__author">Автор фото: Сергей</p>
+                <p class="photo-post__likes">143<span class="hidden"> лайков</span></p>
+            </div>
+            <div class="photo-post">
+                <img class="photo-post__img" src="assets/img/photo-3-mobile.jpg">
+                <h3 class="photo-post__title">Дорога на север</h3>
+                <p class="photo-post__author">Автор фото: Петр</p>
+                <p class="photo-post__likes">96<span class="hidden"> лайков</span></p>
+            </div>
+            <div class="photo-post">
+                <img class="photo-post__img" src="assets/img/photo-4-mobile.jpg">
+                <h3 class="photo-post__title">Мост дьявола</h3>
+                <p class="photo-post__author">Автор фото: Антон</p>
+                <p class="photo-post__likes">254<span class="hidden"> лайков</span></p>
+            </div>
+        </section>
+        <section class="video-section">
+            <h2>Все еще сомневаетесь?</h2>
+            <p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <div class="video-panel">
+                <img class="video-panel__video" src="assets/img/video.jpg" width="320px" height="201px">
+                <div class="video-panel__scroller">
+                    <input type="range" min="0" max="100" value="20">
+                </div>
+                <div class="video-panel__controller">
+                    <button class="video-panel__button video-panel__replay">Сначала</button>
+                    <button class="video-panel__button video-panel__subtitles">Субтитры</button>
+                    <button class="video-panel__button video-panel__fullscreen">Полный экран</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <ul class="page-footer__list">
+            <li class="page-footer__item">
+                <a class="hashtag-visitsedona" href="https://www.google.ru/search?q=%23VISITSEDONA">#VISITSEDONA</a>
+            </li>
+            <li class="page-footer__item social-links">
+                <ul class="social-links__list">
+                    <li class="social-links__item">
+                        <a class="social-links__link" href="https://twitter.com" title="Наш твиттер"><i class="icon-twitter">Наш твиттер</i></a>
+                    </li>
+                    <li class="social-links__item">
+                        <a class="social-links__link" href="https://facebook.com" title="Наш фейсбук"><i class="icon-facebook">Наш фейсбук</i></a>
+                    </li>
+                    <li class="social-links__item">
+                        <a class="social-links__link" href="https://youtube.com" title="Наш ютуб"><i class="icon-youtube">Наш ютуб</i></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="page-footer__item">
+                <p>Разработано</p>
+                <a class="link-htmlacademy" href="https://htmlacademy.ru" title="HTMLAcademy"></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
