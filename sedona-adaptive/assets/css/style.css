@@ -157,8 +157,6 @@ body {
     left: -9999px;
 }
 
-.page-container {}
-
 .introduction {
     padding-top: 45px;
     padding-bottom: 35px;
@@ -173,7 +171,8 @@ body {
 }
 
 .introduction p {
-    padding: 0 40px;
+    max-width: 280px;
+    padding: 0 20px;
     margin: 0 auto;
     text-align: center;
     font-family: "PTSans", sans-serif;
@@ -257,8 +256,7 @@ body {
     display: flex;
     bottom: 66px;
     height: 45px;
-    background-color: black;
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .video-panel__scroller input {
@@ -413,4 +411,337 @@ body {
 .page-footer .link-htmlacademy:active {
     background-position: 0;
     opacity: 0.5;
+}
+
+@media(min-width: 768px) {
+    .page-header {
+        position: relative;
+        width: 100%;
+        height: 55px;
+        padding-bottom: 290px;
+        background-image: url(/assets/img/header-background-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+    }
+    .page-header__h1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 120px;
+        z-index: 1000;
+        width: 458px;
+        height: 78px;
+        margin: 0 auto;
+        background-image: url(../img/sedona-name-tablet.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0;
+    }
+    .page-header__container {
+        position: static;
+        background-color: white;
+        height: 55px;
+        width: 100%;
+    }
+    .main-site-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 102px;
+        height: 83px;
+    }
+    .main-nav {
+        display: block;
+    }
+    .main-nav__list {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .main-nav__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 20%;
+        height: 55px;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .main-nav__link {
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .main-nav__item:hover {
+        background-color: white;
+    }
+    .main-nav__item:hover .main-nav__link {
+        background-color: white;
+        color: #81b3d2;
+    }
+    .main-nav__item:active {
+        background-color: white;
+    }
+    .main-nav__item:active .main-nav__link {
+        background-color: white;
+        color: #b2b2b2;
+    }
+    .main-nav__item:nth-child(4n-1) {
+        margin-left: 20%;
+    }
+    .main-nav-opener {
+        display: none;
+    }
+    .main-nav-checkbox {
+        display: block;
+    }
+    .introduction {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        text-align: center;
+        font-size: 18px;
+        border-bottom: none;
+    }
+    .introduction h2 {
+        width: 430px;
+        margin: 0 auto 40px;
+        margin-top: 0;
+        font-size: 30px;
+    }
+    .introduction p {
+        width: 430px;
+        padding: 0 40px;
+        margin: 0 auto;
+        text-align: center;
+        font-family: "PTSans", sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .photographs-section {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0 60px;
+    }
+    .photo-post {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 50%;
+        padding: 0;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+    .photo-post--big {
+        flex-basis: 100%;
+    }
+    .photo-post__img {
+        flex-basis: 100%;
+    }
+    .photo-post__description {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-grow: 1;
+        padding-left: 20px;
+    }
+    .photo-post__title {
+        margin: 0;
+        margin-top: 24px;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+    .photo-post__author {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-family: "PTSans", sans-serif;
+        font-size: 14px;
+        text-transform: none;
+    }
+    .photo-post__likes {
+        align-self: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 25px;
+        margin-right: 25px;
+        min-height: 21px;
+        background-image: url(../img/icon-like.png);
+        background-repeat: no-repeat;
+        line-height: 25px;
+    }
+    .video-section {
+        padding: 40px 60px;
+        text-align: center;
+    }
+    .video-section > h2 {
+        width: 420px;
+        font-size: 30px;
+        margin: 50px auto 35px;
+    }
+    .video-section > p {
+        width: 420px;
+        margin: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin: 0 auto 80px;
+        font-size: 14px;
+        font-family: "PTSans", sans-serif;
+        line-height: 24px;
+    }
+    .video-panel {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+    .video-panel__video {
+        width: 100%;
+        height: 100%;
+    }
+    .video-panel__scroller {
+        position: static;
+        left: 20px;
+        right: 20px;
+        display: flex;
+        bottom: 66px;
+        height: 100%;
+        background-color: transparent;
+        flex-grow: 1;
+    }
+    .video-panel__scroller input {
+        margin: 0 20px;
+        flex-grow: 1;
+    }
+    .video-panel__controller {
+        position: absolute;
+        bottom: 0;
+        height: 94px;
+        width: 100%;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        flex-grow: 1;
+    }
+    .video-panel__button {
+        height: 100%;
+        width: 80px;
+        font-size: 0;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+    }
+    .video-panel__replay {
+        background-image: url(../img/replay-tablet.png);
+    }
+    .video-panel__subtitles {
+        margin-left: 0;
+        background-image: url(../img/subtitles-tablet.png);
+    }
+    .video-panel__fullscreen {
+        background-image: url(../img/fullscreen-tablet.png);
+    }
+    .page-footer {
+        margin: 0 auto;
+        font-family: "PTSans", "Arial", sans-serif;
+    }
+    .page-footer__list {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .page-footer__item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 33%;
+        flex-grow: 1;
+        min-height: 120px;
+    }
+    .page-footer .hashtag-visitsedona {
+        font-size: 23px;
+        color: black;
+        text-decoration: none;
+        font-family: "PTSansBold", "Arial", sans-serif;
+    }
+    .social-links__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .social-links__item {
+        flex-basis: 48px;
+        height: 48px;
+        margin: 3px;
+        background-color: #81b3d2;
+        line-height: 48px;
+        text-align: center;
+        vertical-align: middle;
+        overflow: hidden;
+    }
+    .social-links__link {
+        text-decoration: none;
+    }
+    .social-links i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 25px;
+        color: white;
+    }
+    .social-links i:hover {
+        background-color: #669ec0;
+    }
+    .social-links i:active {
+        background-color: #5496bd;
+        color: #88b6d1;
+    }
+    [class^="icon-"]::before,
+    [class*=" icon-"]::before {
+        display: inline-block;
+        width: 1em;
+        margin-right: 0.2em;
+        margin-left: 0.2em;
+        font-weight: normal;
+        line-height: 1em;
+        font-family: "symbols-sedona";
+        text-align: center;
+        text-transform: none;
+        text-decoration: inherit;
+        font-style: normal;
+        font-variant: normal;
+        speak: none;
+    }
+    .icon-facebook::before {
+        content: "\66";
+    }
+    .icon-twitter::before {
+        content: "\74";
+    }
+    .icon-youtube::before {
+        content: "\f39e";
+    }
+    .page-footer .link-htmlacademy {
+        width: 27px;
+        height: 34px;
+        margin-left: 6px;
+        margin-top: 5px;
+        background-image: url(../img/htmlacademy-logo.png);
+    }
+    .page-footer .link-htmlacademy:hover {
+        background-position: -27px 0;
+    }
+    .page-footer .link-htmlacademy:active {
+        background-position: 0;
+        opacity: 0.5;
+    }
 }
