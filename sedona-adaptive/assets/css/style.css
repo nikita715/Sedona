@@ -1,9 +1,11 @@
 @font-face {
-    font-family: "PTSansBold";
+    font-weight: bold;
+    font-family: "PTSans";
     src: url('../fonts/ptsansbold.woff2') format('woff2'), url('../fonts/ptsansbold.woff') format('woff');
 }
 
 @font-face {
+    font-weight: normal;
     font-family: "PTSans";
     src: url('../fonts/ptsans.woff2') format('woff2'), url('../fonts/ptsans.woff') format('woff');
 }
@@ -29,7 +31,8 @@ body {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
-    font-family: "PTSansBold", sans-serif;
+    font-family: "PTSans", sans-serif;
+    font-weight: normal;
 }
 
 .page-header {
@@ -37,7 +40,7 @@ body {
     width: 100%;
     height: 55px;
     padding-bottom: 160px;
-    background-image: url(/assets/img/header-background-desktop.jpg);
+    background-image: url(../img/header-background-desktop.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
 }
@@ -79,7 +82,7 @@ body {
     left: 0;
     right: 0;
     bottom: 100%;
-    display: none;
+    display: block;
 }
 
 .main-nav__list {
@@ -102,19 +105,20 @@ body {
     cursor: pointer;
 }
 
-.main-nav__item:hover {
+.main-nav__link:hover {
     background-color: #669ec0;
 }
 
-.main-nav__item:active {
+.main-nav__link:active {
     background-color: #5496bd;
 }
 
-.main-nav__item:active .main-nav__link {
+.main-nav__link:active {
     color: #88b6d1;
 }
 
 .main-nav__item {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,9 +130,14 @@ body {
 }
 
 .main-nav__link {
+    width: 100%;
+    height: 100%;
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
+    line-height: 55px;
+    text-align: center;
 }
 
 .main-nav__item:first-child {
@@ -139,7 +148,8 @@ body {
     border-bottom: none;
 }
 
-.main-nav-opener {
+.main-nav-opener,
+.main-nav-closer {
     position: absolute;
     top: 50%;
     right: 15px;
@@ -147,18 +157,16 @@ body {
     width: 23px;
     height: 21px;
     margin-top: -11px;
-    background-image: url(/assets/img/icon-menu.png);
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.main-nav-opener {
+    background-image: url(../img/icon-menu.png);
 }
 
-.main-nav-checkbox:checked ~ .main-nav {
-    display: block;
-}
-
-.main-nav-checkbox {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
+.main-nav-closer {
+    background-image: url(../img/icon-cross.png);
 }
 
 .introduction {
@@ -180,6 +188,7 @@ body {
     margin: 0 auto;
     text-align: center;
     font-family: "PTSans", sans-serif;
+    font-weight: normal;
     font-size: 14px;
     line-height: 24px;
 }
@@ -218,6 +227,7 @@ body {
     background-image: url(../img/icon-like.png);
     background-repeat: no-repeat;
     line-height: 25px;
+    font-weight: bold;
 }
 
 .video-section {
@@ -238,6 +248,7 @@ body {
     margin-bottom: 35px;
     font-size: 14px;
     font-family: "PTSans", sans-serif;
+    font-weight: normal;
     line-height: 24px;
 }
 
@@ -286,6 +297,16 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     border: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.video-panel__button:hover {
+    opacity: 1;
+}
+
+.video-panel__button:active {
+    opacity: 0.5;
 }
 
 .video-panel__replay {
@@ -328,6 +349,7 @@ body {
     color: black;
     text-decoration: none;
     font-family: "PTSansBold", "Arial", sans-serif;
+    font-weight: bold;
 }
 
 .social-links__list {
@@ -418,6 +440,9 @@ body {
 }
 
 @media(min-width: 768px) {
+    .main-nav-closer {
+        display: none;
+    }
     .page-header {
         height: auto;
         padding-bottom: 0;
@@ -436,7 +461,7 @@ body {
     .main-nav {
         position: static;
         display: block;
-        background-image: url(/assets/img/header-background-desktop.jpg);
+        background-image: url(../img/header-background-desktop.jpg);
         background-repeat: no-repeat;
         background-size: 100% auto;
         background-position: center bottom;
